@@ -53,7 +53,7 @@ public class UserService implements UserDetailsService {
         userRepo.save(user);
     }
 
-    public void userDelete(User user) {
-        userRepo.delete(user);
+    public void userDelete(Long id) {
+        userRepo.delete(userRepo.getById(id));
     }
 }

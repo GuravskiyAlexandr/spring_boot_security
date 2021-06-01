@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.configSecurity;
 
 
 import org.springframework.security.core.Authentication;

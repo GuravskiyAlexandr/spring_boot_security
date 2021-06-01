@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.configSecurity;
 
 import com.example.demo.service.UserService;
 import org.springframework.context.annotation.Configuration;
@@ -32,9 +32,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/").authenticated()// доступность всем
-                .antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
                 .antMatchers("/user")
                 .access("hasAnyRole('ROLE_USER')") // разрешаем входить на /user пользователям с ролью User
+                .antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
                 .and()
                 .formLogin() // Spring сам подставит свою логин форму
                 // указываем action с формы логина

@@ -46,14 +46,14 @@
             </th:block>
         </td>
         <td style="width: 80px;" class="align-middle">
-            <a th:href="@{'/edit/'+${user.getId()}}"
+            <a th:href="@{'/edit?id='+${user.getId()}}"
                class="btn btn-primary"
                style="width: 80px;"
                type="button">Edit
             </a>
         </td>
         <td style="width: 80px;" class="align-middle">
-            <a th:href="@{'admin/delete/'+ ${user.getId()}}"
+            <a th:href="@{'admin/delete?id='+ ${user.getId()}}"
                type="button"
                class="btn btn-danger">Delete
             </a>
